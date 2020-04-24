@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14492.1" systemVersion="19E266" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Character1" representedClassName="Character1" syncable="YES">
+        <attribute name="cha" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="con" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="currentHP" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="dex" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="int" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="level" optional="YES" transient="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="maxHP" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="str" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="wis" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="toClasses" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Class1" inverseName="toCharacter" inverseEntity="Class1" syncable="YES"/>
+        <relationship name="toItems" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Item" inverseName="toCharacter" inverseEntity="Item" syncable="YES"/>
+        <relationship name="toRace" maxCount="1" deletionRule="Cascade" destinationEntity="Race1" inverseName="toCharacter" inverseEntity="Race1" syncable="YES"/>
+        <relationship name="toSpellSlots" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="SpellSlot" inverseName="toCharacter" inverseEntity="SpellSlot" syncable="YES"/>
+        <relationship name="toWeapons" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Weapon" inverseName="toCharacter" inverseEntity="Weapon" syncable="YES"/>
+    </entity>
+    <entity name="Class1" representedClassName="Class1" syncable="YES" codeGenerationType="class">
+        <attribute name="cha" optional="YES" attributeType="Boolean" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="con" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="dex" optional="YES" attributeType="Boolean" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="hit" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="int" optional="YES" attributeType="Boolean" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="level" optional="YES" attributeType="Integer 16" minValueString="1" maxValueString="20" defaultValueString="1" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="spellcaster" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="str" optional="YES" attributeType="Boolean" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="wis" optional="YES" attributeType="Boolean" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="toCharacter" maxCount="1" deletionRule="Nullify" destinationEntity="Character1" inverseName="toClasses" inverseEntity="Character1" syncable="YES"/>
+        <relationship name="toSpellLink" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ClassSpellLink" inverseName="toClass" inverseEntity="ClassSpellLink" syncable="YES"/>
+        <relationship name="toSpellTest" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Spell" inverseName="toClassTest" inverseEntity="Spell" syncable="YES"/>
+        <relationship name="toSubclass" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SubClass" inverseName="toMainClass" inverseEntity="SubClass" syncable="YES"/>
+    </entity>
+    <entity name="ClassSpellLink" representedClassName="ClassSpellLink" syncable="YES" codeGenerationType="class">
+        <attribute name="prepared" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="toClass" maxCount="1" deletionRule="Nullify" destinationEntity="Class1" inverseName="toSpellLink" inverseEntity="Class1" syncable="YES"/>
+        <relationship name="toSpell" maxCount="1" deletionRule="Nullify" destinationEntity="Spell" inverseName="toClassLink" inverseEntity="Spell" syncable="YES"/>
+    </entity>
+    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="worth" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="toCharacter" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Character1" inverseName="toItems" inverseEntity="Character1" syncable="YES"/>
+    </entity>
+    <entity name="Race1" representedClassName="Race1" syncable="YES" codeGenerationType="class">
+        <attribute name="cha" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="con" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="dex" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="int" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="str" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="wis" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="toCharacter" maxCount="1" deletionRule="Nullify" destinationEntity="Character1" inverseName="toRace" inverseEntity="Character1" syncable="YES"/>
+    </entity>
+    <entity name="Spell" representedClassName="Spell" syncable="YES" codeGenerationType="class">
+        <attribute name="casttime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="components" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="duration" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="level" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="range" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ritual" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="school" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="source" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="upcast" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="toClassLink" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ClassSpellLink" inverseName="toSpell" inverseEntity="ClassSpellLink" syncable="YES"/>
+        <relationship name="toClassTest" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Class1" inverseName="toSpellTest" inverseEntity="Class1" syncable="YES"/>
+    </entity>
+    <entity name="SpellSlot" representedClassName="SpellSlot" syncable="YES">
+        <attribute name="used1" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="used2" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="used3" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="used4" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="used5" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="used6" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="used7" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="used8" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="used9" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="toCharacter" maxCount="1" deletionRule="Nullify" destinationEntity="Character1" inverseName="toSpellSlots" inverseEntity="Character1" syncable="YES"/>
+    </entity>
+    <entity name="SubClass" representedClassName="SubClass" syncable="YES" codeGenerationType="class">
+        <relationship name="toMainClass" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Class1" inverseName="toSubclass" inverseEntity="Class1" syncable="YES"/>
+    </entity>
+    <entity name="Weapon" representedClassName="Weapon" syncable="YES" codeGenerationType="class">
+        <attribute name="damage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="modifier" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="proficiency" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="toCharacter" maxCount="1" deletionRule="Nullify" destinationEntity="Character1" inverseName="toWeapons" inverseEntity="Character1" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Character1" positionX="-54" positionY="-144" width="128" height="270"/>
+        <element name="Class1" positionX="-27" positionY="-108" width="128" height="255"/>
+        <element name="ClassSpellLink" positionX="-69.5" positionY="-247.453125" width="128" height="90"/>
+        <element name="Race1" positionX="-45" positionY="-135" width="128" height="165"/>
+        <element name="Spell" positionX="-63" positionY="-18" width="128" height="240"/>
+        <element name="SpellSlot" positionX="-36" positionY="-99" width="128" height="195"/>
+        <element name="SubClass" positionX="-9" positionY="-72" width="128" height="60"/>
+        <element name="Weapon" positionX="-36" positionY="-99" width="128" height="135"/>
+        <element name="Item" positionX="-36" positionY="-99" width="128" height="105"/>
+    </elements>
+</model>
