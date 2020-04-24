@@ -69,7 +69,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func preloadData() {
         preloadSpellData()
-        preloadRaceData()
+//        preloadRaceData()
     }
     
     func preloadSpellData() {
@@ -82,7 +82,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 //        if UIDevice.init().
         let bundle = Bundle.main
-        let paths = bundle.paths(forResourcesOfType: "txt", inDirectory: "files")
+        let paths = bundle.paths(forResourcesOfType: "txt", inDirectory: "Spells")
         
         if (paths.count == 0) {
             fatalError()
