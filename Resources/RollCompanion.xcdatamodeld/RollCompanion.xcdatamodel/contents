@@ -96,11 +96,11 @@
         <element name="Character1" positionX="-54" positionY="-144" width="128" height="270"/>
         <element name="Class1" positionX="-27" positionY="-108" width="128" height="255"/>
         <element name="ClassSpellLink" positionX="-69.5" positionY="-247.453125" width="128" height="90"/>
+        <element name="Item" positionX="-36" positionY="-99" width="128" height="105"/>
         <element name="Race1" positionX="-45" positionY="-135" width="128" height="165"/>
         <element name="Spell" positionX="-63" positionY="-18" width="128" height="240"/>
         <element name="SpellSlot" positionX="-36" positionY="-99" width="128" height="195"/>
         <element name="SubClass" positionX="-9" positionY="-72" width="128" height="60"/>
         <element name="Weapon" positionX="-36" positionY="-99" width="128" height="135"/>
-        <element name="Item" positionX="-36" positionY="-99" width="128" height="105"/>
     </elements>
 </model>
