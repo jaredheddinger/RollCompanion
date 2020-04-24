@@ -1,0 +1,11 @@
+name Lesser Restoration
+source PHB.255
+school abjuration
+level 2
+ritual 0
+casttime 1 action
+range Touch
+components V, S
+duration Instantaneous
+text You touch a creature and can end either one disease or one condition afflicting it. The condition can be blinded, deafened, paralyzed, or poisoned.
+

@@ -1,0 +1,11 @@
+name Aura Of Vitality
+source PHB.216
+school evocation
+level 3
+ritual 0
+casttime 1 action
+range Self (30-foot radius)
+components V
+duration Concentration, up to 1 minute
+text Healing energy radiates from you in an aura with a 30-foot radius. Until the spell ends, the aura moves with you, centered on you. You can use a bonus action to cause one creature in the aura (including you) to regain 2d6 hit points.
+

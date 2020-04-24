@@ -1,0 +1,11 @@
+name Misty Step
+source PHB.260
+school conjuration
+level 2
+ritual 0
+casttime 1 bonus action
+range Self
+components V
+duration Instantaneous
+text Briefly surrounded by silvery mist, you teleport up to 30 feet to an unoccupied space that you can see.
+

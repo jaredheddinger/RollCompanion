@@ -1,0 +1,11 @@
+name Mind Blank
+source PHB.259
+school abjuration
+level 8
+ritual 0
+casttime 1 action
+range Touch
+components V, S
+duration 24 hours
+text Until the spell ends, one willing creature you touch is immune to psychic damage, any effect that would sense its emotions or read its thoughts, divination spells, and the charmed condition. The spell even foils *[Wish](wish)* spells and spells or effects of similar power used to affect the target’s mind or to gain information about the target.
+

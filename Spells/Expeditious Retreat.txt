@@ -1,0 +1,11 @@
+name Expeditious Retreat
+source PHB.238
+school transmutation
+level 1
+ritual 0
+casttime 1 bonus action
+range Self
+components V, S
+duration Concentration, up to 10 minutes
+text This spell allows you to move at an incredible pace. When you cast this spell, and then as a bonus action on each of your turns until the spell ends, you can take the Dash action.
+

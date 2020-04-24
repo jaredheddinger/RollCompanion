@@ -1,0 +1,11 @@
+name Blade Ward
+source PHB.218
+school Abjuration
+level 0
+ritual 0
+casttime 1 action
+range Self
+components V, S
+duration 1 round
+text You extend your hand and trace a sigil of warding in the air. Until the end of your next turn, you have resistance against bludgeoning, piercing, and slashing damage dealt by weapon attacks.
+

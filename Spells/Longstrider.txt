@@ -1,0 +1,13 @@
+name Longstrider
+source PHB.256
+school transmutation
+level 1
+ritual 0
+casttime 1 action
+range Touch
+components V, S, M (a pinch of dirt)
+duration 1 hour
+text You touch a creature. The target’s speed increases by 10 feet until the spell ends.
+
+**At Higher Levels.** When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each spell slot above 1st.
+

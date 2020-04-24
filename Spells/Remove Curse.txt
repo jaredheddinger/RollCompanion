@@ -1,0 +1,11 @@
+name Remove Curse
+source PHB.271
+school abjuration
+level 3
+ritual 0
+casttime 1 action
+range Touch
+components V, S
+duration Instantaneous
+text At your touch, all curses affecting one creature or object end. If the object is a cursed magical item, its curse remains, but the spell breaks its owner’s attunement to the object so it can be removed or discarded.
+

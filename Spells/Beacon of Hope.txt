@@ -1,0 +1,11 @@
+name Beacon of Hope
+source PHB.217
+school abjuration
+level 3
+ritual 0
+casttime 1 action
+range 30 feet
+components V, S
+duration Concentration, up to 1 minute
+text This spell bestows hope and vitality. Choose any number of creatures within range. For the duration, each target has advantage on Wisdom saving throws and death saving throws, and regains the maximum number of hit points possible from any healing.
+

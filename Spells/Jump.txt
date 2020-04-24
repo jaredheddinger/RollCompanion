@@ -1,0 +1,11 @@
+name Jump
+source PHB.254
+school transmutation
+level 1
+ritual 0
+casttime 1 action
+range Touch
+components V, S, M (a grasshopper’s hind leg)
+duration 1 minute
+text You touch a creature. The creature’s jump distance is tripled until the spell ends.
+

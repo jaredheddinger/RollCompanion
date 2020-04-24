@@ -1,0 +1,11 @@
+name Protection from Poison
+source PHB.270
+school abjuration
+level 2
+ritual 0
+casttime 1 action
+range Touch
+components V, S
+duration 1 hour
+text You touch a creature. If it is poisoned, you neutralize the poison. If more than one poison afflicts the target, you neutralize one poison that you know is present, or you neutralize one at random. For the duration, the target has advantage on saving throws against being poisoned, and it has resistance to poison damage.
+
